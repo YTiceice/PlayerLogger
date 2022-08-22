@@ -23,3 +23,9 @@ mvn install
 ```
 /lookup <玩家ID> - 查詢玩家資訊
 ```
+
+## 權限
+
+```
+player.lookup - 執行lookup的權限
+```
