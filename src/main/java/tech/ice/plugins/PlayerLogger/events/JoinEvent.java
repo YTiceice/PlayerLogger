@@ -13,6 +13,38 @@ import java.net.InetSocketAddress;
 import java.util.UUID;
 
 public class JoinEvent implements Listener {
+
+    public static int getExpToLevelUp(int level){
+        if (level <= 15){
+            return 2 * level + 7;
+        } else if (level <= 30) {
+            return 5 * level - 38;
+        } else {
+            return 9 * level - 158;
+        }
+    }
+
+    public static int getExpAtLevel(int level){
+        if (level <= 16) {
+            return (int) (Math.pow(level,2) + 6 * level);
+        } else if (level <= 31) {
+            return (int) (2.5 * Math.pow(level,2) - 40.5 * level + 360.0);
+        } else {
+            return (int) (4.5 * Math.pow(level,2) - 162.5 * level + 2220.0);
+        }
+    }
+
+    public static int getPlayerExp(Player player){
+        int exp = 0;
+        int level = player.getLevel();
+
+        exp += getExpAtLevel(level);
+
+        exp += Math.round(getExpToLevelUp(level) * player.getExp());
+
+        return exp;
+    }
+
     @EventHandler
     public void onJoin(PlayerJoinEvent event) {
         Player player = event.getPlayer();
@@ -21,8 +53,8 @@ public class JoinEvent implements Listener {
         Double health = event.getPlayer().getHealth();
         int hunger = event.getPlayer().getFoodLevel();
         float food = event.getPlayer().getSaturation();
-        float exp = event.getPlayer().getExp();
-        int level = event.getPlayer().getExpToLevel();
+        int level = event.getPlayer().getLevel();
+        float exp = getPlayerExp(player);
         String world = event.getPlayer().getWorld().getName();
         Double x = event.getPlayer().getLocation().getX();
         Double y = event.getPlayer().getLocation().getY();
