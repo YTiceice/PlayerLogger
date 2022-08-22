@@ -17,7 +17,7 @@ public class Lookup implements CommandExecutor {
 
     @Override
     public boolean onCommand(CommandSender sender, Command cmd, String label, String[] args) {
-        if (!sender.isOp()) {
+        if (!sender.isOp() && !sender.hasPermission("player.lookup")) {
             sender.sendMessage("§c你沒有權限使用這個指令");
         } else if (args.length == 0) {
             sender.sendMessage("§c用法：/lookup <玩家ID>");
