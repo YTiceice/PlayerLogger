@@ -16,4 +16,4 @@ mvn install
 
 ## 核心
 
-**支持[Bukkit]**
+**支持 [Bukkit]**
