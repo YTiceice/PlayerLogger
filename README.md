@@ -17,3 +17,9 @@ mvn install
 ## 核心
 
 **支持 [Bukkit]**
+
+## 指令
+
+```
+/lookup <玩家ID> - 查詢玩家資訊
+```
