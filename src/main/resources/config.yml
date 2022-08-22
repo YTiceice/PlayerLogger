@@ -1,2 +1,3 @@
+config-version: 1.0
 ##是否於 lookup 指令的 tab 顯示離線玩家
 show-offline: true
