@@ -12,12 +12,17 @@ import org.bukkit.Bukkit;
 
 import java.io.IOException;
 
+import org.bstats.bukkit.Metrics;
+
 public class PlayerLogger extends JavaPlugin {
 
     public static PlayerLogger PlayerLogger;
 
     @Override
     public void onEnable() {
+        int ID = 16236;
+        Metrics metrics = new Metrics(this, ID);
+
         PlayerLogger = this;
         Bukkit.getPluginManager().registerEvents(new JoinEvent(), this);
         Bukkit.getPluginManager().registerEvents(new MoveEvent(), this);
