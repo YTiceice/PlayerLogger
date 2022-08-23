@@ -20,7 +20,7 @@ public class PlayerLogger extends JavaPlugin {
 
     @Override
     public void onEnable() {
-        int ID = 16236;
+        int ID = 16238;
         Metrics metrics = new Metrics(this, ID);
 
         PlayerLogger = this;
