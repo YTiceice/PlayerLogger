@@ -80,6 +80,12 @@
         </dependency>
     </dependencies>
 
-
+    <distributionManagement>
+      <repository>
+        <id>github</id>
+        <name>GitHub Packages</name>
+        <url>https://github.com/YTiceice/PlayerLogger</url>
+      </repository>
+    </distributionManagement>
 
 </project>
