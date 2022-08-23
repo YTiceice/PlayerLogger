@@ -5,7 +5,7 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>tech.ice.plugins</groupId>
-    <artifactId>PlayerLogger</artifactId>
+    <artifactId>playerlogger</artifactId>
     <version>1.0</version>
 
     <properties>
@@ -84,7 +84,7 @@
       <repository>
         <id>github</id>
         <name>GitHub Packages</name>
-        <url>https://maven.pkg.github.com/YTiceice/playerlogger</url>
+        <url>https://maven.pkg.github.com/YTiceice/PlayerLogger</url>
       </repository>
     </distributionManagement>
 
